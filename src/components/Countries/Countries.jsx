@@ -30,6 +30,12 @@ const Countries = ({countriesPromise}) => {
                     visitedCountries.map(country => <li key={country.cca3.cca3}>{country.name.common}</li>)
                 }
             </ol>
+
+            <div className='visited-flag-container'>
+                {
+                    visitedFlags.map((flag, index) => <img key={index} src={flag}></img>);
+                }
+            </div>
            <div className='countries'>
             {
               countries.map(country => <Country key={country.cca3.cca3} country={country}>
